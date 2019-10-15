@@ -1,5 +1,5 @@
 # rn-weather
-A weather app using React Native and Context API
+A weather app using React Native and Context API. The weather data is from OpenWeatherMaps api. Gradient backgrounds design inspiration https://medium.com/p/4f1775ce4571/responses/show
 
 ### How to run
 1. Clone the repository
