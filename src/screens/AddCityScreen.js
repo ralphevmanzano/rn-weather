@@ -5,7 +5,7 @@ import { Context as SettingsContext } from '../context/SettingsContext';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { Header } from 'react-navigation-stack';
 import GlobalStyles from '../styles/GlobalStyles'
-import { THEME_STANDARD } from '../constants';
+import { THEME_STANDARD, GOOGLE_PLACES_API_KEY } from '../constants';
 import { Toolbar, Icon, IconToggle } from 'react-native-material-ui';
 import Colors from '../utils/Colors';
 
@@ -52,7 +52,7 @@ const AddCityScreen = ({ navigation }) => {
         onPress={onCityPress}
         getDefaultValue={() => ''}
         query={{
-          key: 'AIzaSyAcGK-EN9AwBfkW_1ucMrUUF5iogKnIluY',
+          key: `${GOOGLE_PLACES_API_KEY}`,
           language: 'en', 
           types: '(cities)' 
         }}

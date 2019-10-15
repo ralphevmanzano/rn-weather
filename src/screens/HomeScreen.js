@@ -96,25 +96,28 @@ const HomeScreen = () => {
   }
 
   const createLocationName = () => {
-    const { terms } = defaultCity;
-    const { address_components } = defaultCity;
+    if (!_.isNil(defaultCity)) {
+      const { terms } = defaultCity;
+      const { address_components } = defaultCity;
 
-    var arr = [];
-    var city = '';
-    var country = '';
+      var arr = [];
+      var city = '';
+      var country = '';
 
-    if (!_.isNil(terms)) {
-      arr = terms;
-      const l = arr.length;
-      city = arr[0].value;
-      country = arr[l - 1].value;
-    } else if (!_.isNil(address_components)) {
-      arr = address_components;
-      const l = arr.length;
-      city = arr[0].long_name;
-      country = arr[l - 1].long_name;
+      if (!_.isNil(terms)) {
+        arr = terms;
+        const l = arr.length;
+        city = arr[0].value;
+        country = arr[l - 1].value;
+      } else if (!_.isNil(address_components)) {
+        arr = address_components;
+        const l = arr.length;
+        city = arr[0].long_name;
+        country = arr[l - 1].long_name;
+      }
+      return city + ", " + country;
     }
-    return city + ", " + country;
+    return '';
   }
 
   const getCityName = createLocationName().split(',')[0];

@@ -1,8 +1,18 @@
 import createDataContext from './createDataContext';
 import weatherApi from '../api/weatherApi';
 import { AsyncStorage } from 'react-native';
-import { TEMP_CELSIUS, ERROR, REQUEST_TIMEOUT } from '../constants';
-import { FETCH_WEATHER, GET_CACHED_WEATHER, CLEAR_WEATHER, CLEAR_ERROR, GET_CACHED_WEATHER_WITH_ERROR } from '../constants/weather';
+import { 
+  TEMP_CELSIUS, 
+  ERROR, 
+  REQUEST_TIMEOUT,
+  FETCH_WEATHER, 
+  GET_CACHED_WEATHER, 
+  CLEAR_WEATHER, 
+  CLEAR_ERROR, 
+  GET_CACHED_WEATHER_WITH_ERROR, 
+  OPEN_WEATHER_MAP_API_KEY,
+  } from '../constants';
+
 import moment from 'moment';
 import _ from 'lodash';
 import axios from 'axios'
@@ -60,14 +70,14 @@ const fetchWeather = dispatch => async (location, temp) => {
         if (weatherRes === null || forecastRes === null) {
           source.cancel();
         }
-      }, 4000);
+      }, 7000);
 
       weatherRes = await weatherApi.get(
-        `weather?q=${name}&units=${unit}&appid=14bb52b46fba28998efa2ced2f66fb38`,
+        `weather?q=${name}&units=${unit}&appid=${OPEN_WEATHER_MAP_API_KEY}`,
         { cancelToken: source.token }
       );
       forecastRes = await weatherApi.get(
-        `forecast?q=${name}&units=${unit}&appid=14bb52b46fba28998efa2ced2f66fb38`,
+        `forecast?q=${name}&units=${unit}&appid=${OPEN_WEATHER_MAP_API_KEY}`,
         { cancelToken: source.token }
       );
 

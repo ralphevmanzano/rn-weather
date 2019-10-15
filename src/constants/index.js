@@ -4,3 +4,4 @@ export * from './cities';
 export * from './weather';
 export * from './strings';
 export * from './api';
+export * from './keys';
