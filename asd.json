@@ -1,0 +1,69 @@
+{
+  "address_components":[
+     {
+        "long_name":"Cebu City",
+        "short_name":"Cebu City",
+        "types":[
+           "administrative_area_level_3",
+           "political"
+        ]
+     },
+     {
+        "long_name":"Cebu",
+        "short_name":"Cebu",
+        "types":[
+           "administrative_area_level_2",
+           "political"
+        ]
+     },
+     {
+        "long_name":"Central Visayas",
+        "short_name":"Central Visayas",
+        "types":[
+           "administrative_area_level_1",
+           "political"
+        ]
+     },
+     {
+        "long_name":"Philippines",
+        "short_name":"PH",
+        "types":[
+           "country",
+           "political"
+        ]
+     }
+  ],
+  "formatted_address":"Cebu City, Cebu, Philippines",
+  "geometry":{
+     "bounds":{
+        "northeast":{
+           "lat":10.4933219,
+           "lng":123.9263871
+        },
+        "southwest":{
+           "lat":10.259597,
+           "lng":123.760324
+        }
+     },
+     "location":{
+        "lat":10.3978208,
+        "lng":123.8634544
+     },
+     "location_type":"APPROXIMATE",
+     "viewport":{
+        "northeast":{
+           "lat":10.4933219,
+           "lng":123.9263871
+        },
+        "southwest":{
+           "lat":10.259597,
+           "lng":123.760324
+        }
+     }
+  },
+  "place_id":"ChIJn1BbLn-fqTMRNRkO8K6KmvA",
+  "types":[
+     "administrative_area_level_3",
+     "political"
+  ]
+}
